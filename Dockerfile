@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 
-ARG USER_ID
-ARG GROUP_ID
+ARG USER_ID=1001
+ARG GROUP_ID=1001
 
 # Needed for a silent cmake install
 ARG DEBIAN_FRONTEND=noninteractive
@@ -53,7 +53,8 @@ RUN \
   rm -rf /var/lib/apt/lists/*
 
 # Add user to sudoers so that they can up the mqueue depth
-RUN adduser onair_dev sudo
+# RUN adduser onair_dev sudo
+RUN sudo usermod -aG sudo onair_dev
 RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 # Make OnAir requirements file accessible by onair_dev user
