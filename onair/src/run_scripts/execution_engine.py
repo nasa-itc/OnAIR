@@ -129,9 +129,12 @@ class ExecutionEngine:
         temp_diagnosis_path = os.path.join(temp_save_path, 'diagnosis')
 
         self.delete_save_paths()
-        os.mkdir(temp_save_path)
-        os.mkdir(temp_models_path)
-        os.mkdir(temp_diagnosis_path)
+        if not(os.path.exists(temp_save_path)):
+            os.mkdir(temp_save_path)
+        if not(os.path.exists(temp_models_path)):
+            os.mkdir(temp_models_path)
+        if not(os.path.exists(temp_save_path)):
+            os.mkdir(temp_save_path)
 
         os.environ['ONAIR_SAVE_PATH'] = save_path
         os.environ['ONAIR_TMP_SAVE_PATH'] = temp_save_path
