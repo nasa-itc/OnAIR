@@ -45,6 +45,8 @@ RUN \
 
 # Add new packages to install here to prevent re-running previous instructions
 
+RUN \
+  pip3 install numpy
 
 # Ensure that all packages are up to date after new packages have been added above
 RUN \
