@@ -29,7 +29,7 @@ def main():
 
     arg_parser = argparse.ArgumentParser(description='')
     arg_parser.add_argument('configfile', nargs='?',
-                            default='./onair/config/default_config.ini',
+                            default='./onair/config/sbn_cfs_config.ini',
                             help='Config file to be used')
     arg_parser.add_argument('--save', '-s', action='store_true',
                             help='Should log files be saved?')
