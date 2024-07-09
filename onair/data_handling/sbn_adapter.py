@@ -19,9 +19,12 @@ import datetime
 import os
 import json
 
+import sys
+sys.path.append('/home/jstar/Desktop/github-nos3/fsw/apps/sbn_client/fsw/python_interface')
+
 from onair.data_handling.on_air_data_source import OnAirDataSource
 from ctypes import *
-import /home/jstar/Desktop/github-nos3/fsw/apps/sbn_client/python_interface/sbn_python_client as sbn
+import sbn_python_client as sbn
 import message_headers as msg_hdr
 
 from onair.data_handling.parser_util import *
