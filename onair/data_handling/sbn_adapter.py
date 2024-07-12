@@ -21,11 +21,12 @@ import json
 
 import sys
 sys.path.append('/home/jstar/Desktop/github-nos3/fsw/apps/sbn_client/fsw/python_interface')
+# sys.path.append('/home/jstar/Desktop/github-nos3/components/OnAIR/onair/data_handling')
 
 from onair.data_handling.on_air_data_source import OnAirDataSource
 from ctypes import *
 import sbn_python_client as sbn
-import message_headers as msg_hdr
+import onair.data_handling.message_headers as msg_hdr
 
 from onair.data_handling.parser_util import *
 

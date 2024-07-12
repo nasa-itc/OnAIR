@@ -10,8 +10,8 @@
 import pytest
 from unittest.mock import MagicMock, PropertyMock
 
-import onair.src.run_scripts.sbn_adapter as sbn_adapter
-from onair.src.run_scripts.sbn_adapter import AdapterDataSource
+import onair.data_handling.sbn_adapter as sbn_adapter
+from onair.data_handling.sbn_adapter import AdapterDataSource
 
 from importlib import reload
 import sys
