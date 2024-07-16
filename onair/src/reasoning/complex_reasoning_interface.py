@@ -20,15 +20,20 @@ class ComplexReasoningInterface:
         self.headers = headers
         self.reasoning_constructs = import_plugins(self.headers,_reasoning_plugins)
 
+<<<<<<< HEAD
     def update(self, low_level_data, high_level_data):
         for plugin in self.reasoning_constructs:
             plugin.update(low_level_data, high_level_data=high_level_data)
+=======
+    def update_and_render_reasoning(self, high_level_data):
+        intelligent_outcomes = high_level_data
+        intelligent_outcomes['complex_systems'] = {}
+        for plugin in self.reasoning_constructs:
+            plugin.update(high_level_data=intelligent_outcomes)
+            intelligent_outcomes['complex_systems'].update({plugin.component_name:plugin.render_reasoning()})
+        return intelligent_outcomes
+>>>>>>> c1b3f1d03fa45a6b7b8f96c00999452800972810
 
     def check_for_salient_event(self):
         pass
 
-    def render_reasoning(self):
-        intelligent_outcomes = {}
-        for plugin in self.reasoning_constructs:
-            intelligent_outcomes[plugin.component_name] = plugin.render_reasoning()
-        return intelligent_outcomes
