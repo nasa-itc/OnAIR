@@ -39,13 +39,6 @@ class Agent:
 
         return self.complex_reasoning_systems.update_and_render_reasoning(aggregate_high_level_info)
 
-<<<<<<< HEAD
-        self.complex_reasoning_systems.update(self.vehicle_rep.curr_data, aggregate_high_level_info)
-        
-        return self.render_reasoning()
-  
-=======
->>>>>>> c1b3f1d03fa45a6b7b8f96c00999452800972810
     def diagnose(self, time_step):
         """ Grab the mnemonics from the """
         learning_system_results = self.learning_systems.render_reasoning()

@@ -45,7 +45,7 @@ class DataSource(OnAirDataSource):
     def connect(self):
         """Establish connection to SBN and launch listener thread."""
         time.sleep(2)
-        os.chdir("cf")
+        os.chdir("/home/jstar/Desktop/github-nos3/fsw/build/exe/cpu1/cf")
         sbn.sbn_load_and_init()
         os.chdir("../")
         print("SBN_Adapter Running")
