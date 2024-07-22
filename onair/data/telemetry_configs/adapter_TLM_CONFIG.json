@@ -34,6 +34,6 @@
       "SAMPLE_APP.Payload.Spare"
   ],
   "channels":{
-      "0x08FA": ["SAMPLE_APP", "SAMPLE_APP_HkTlm_t"]
+      "0x18FA": ["SAMPLE_APP", "SAMPLE_APP_HkTlm_t"]
   }
 }

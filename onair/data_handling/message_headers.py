@@ -8,7 +8,7 @@ class SAMPLE_APP_HkTlm_Payload_t(Structure):
     _fields_ = [
         ("CommandErrorCounter", c_uint8),
         ("CommandCounter", c_uint8),
-        ("spare", c_uint8 * 2)       
+        ("spare", c_uint32)       
     ]
 
 class SAMPLE_APP_HkTlm_t(Structure):
