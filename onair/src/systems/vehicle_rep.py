@@ -45,6 +45,9 @@ class VehicleRepresentation:
     def update_curr_data(self, frame):
         for i in range(len(frame)):
             if frame[i] != '-':
+                # Debug Prints
+                # print("curr_data length: {}, frame length: {}".format(len(self.curr_data), len(frame)))
+                # print("curr_data: {}, frame: {}".format(self.curr_data, frame))
                 self.curr_data[i] = frame[i]
 
     ##### GETTERS AND SETTERS #####

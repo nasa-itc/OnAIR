@@ -106,7 +106,7 @@ class DataSource(OnAirDataSource):
                     for field_name in field_names:
                         self.currentData[x]['headers'].append(field_name)
                         self.currentData[x]['data'].append([0]) #initialize all the data arrays with zero
-
+        print("Current Data Headers: {}.".format(self.currentData[0]["headers"]))
         return extract_meta_data_handle_ss_breakdown(meta_data_file, ss_breakdown)
 
     def process_data_file(self, data_file):
